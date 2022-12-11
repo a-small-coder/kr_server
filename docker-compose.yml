@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  server1:
+    build: ./server1
+    container_name: server1
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+  
+  server3:
+    build: ./server3
+    container_name: server3
+    restart: unless-stopped
+    ports:
+      - "2999:2999"
+  
+  server2:
+    build: ./server2
+    container_name: server2
+    restart: unless-stopped
+    ports:
+      - "3002:3002"
+    
