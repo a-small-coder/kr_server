@@ -8,17 +8,6 @@ services:
     restart: unless-stopped
     ports:
       - "3001:3001"
-    networks:
-      - server_main
-  
-  server3:
-    build: ./server3
-    container_name: server3
-    restart: unless-stopped
-    ports:
-      - "2999:2999"
-    networks:
-      - server_main
   
   server2:
     build: ./server2
@@ -26,10 +15,21 @@ services:
     restart: unless-stopped
     ports:
       - "3002:3002"
-    networks:
-      - server_main
+  
+  server3:
+    build: ./server3
+    container_name: server3
+    restart: unless-stopped
+    ports:
+      - "2999:2999"
+  
+  client:
+    build: ../kr-client
+    container_name: client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server1
+      - server2
+      - server3
 
-networks:
-  default:
-    name: server_main
-    external: true
