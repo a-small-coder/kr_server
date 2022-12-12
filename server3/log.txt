@@ -1,0 +1,11 @@
+connected to server-1
+Server-1: [time: Mon Dec 12 2022 11:54:07 GMT+0300 (Москва, стандартное время), data: GET request from user jdPse2FVunG1uL-ZAAAJ]
+Server-1: [time: Mon Dec 12 2022 11:54:07 GMT+0300 (Москва, стандартное время), data: Success response to user jdPse2FVunG1uL-ZAAAJ]
+Server-1: [time: Mon Dec 12 2022 11:54:12 GMT+0300 (Москва, стандартное время), data: GET request from user jdPse2FVunG1uL-ZAAAJ]
+Server-1: [time: Mon Dec 12 2022 11:54:12 GMT+0300 (Москва, стандартное время), data: Success response to user jdPse2FVunG1uL-ZAAAJ]
+Server-1: [time: Mon Dec 12 2022 11:54:13 GMT+0300 (Москва, стандартное время), data: GET request from user jdPse2FVunG1uL-ZAAAJ]
+Server-1: [time: Mon Dec 12 2022 11:54:13 GMT+0300 (Москва, стандартное время), data: Success response to user jdPse2FVunG1uL-ZAAAJ]
+Server-1: [time: Mon Dec 12 2022 11:54:13 GMT+0300 (Москва, стандартное время), data: GET request from user jdPse2FVunG1uL-ZAAAJ]
+Server-1: [time: Mon Dec 12 2022 11:54:13 GMT+0300 (Москва, стандартное время), data: Success response to user jdPse2FVunG1uL-ZAAAJ]
+Server-1: [time: Mon Dec 12 2022 11:54:13 GMT+0300 (Москва, стандартное время), data: GET request from user jdPse2FVunG1uL-ZAAAJ]
+Server-1: [time: Mon Dec 12 2022 11:54:13 GMT+0300 (Москва, стандартное время), data: Success response to user jdPse2FVunG1uL-ZAAAJ]

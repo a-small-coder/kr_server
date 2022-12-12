@@ -12,34 +12,44 @@ const socket2 = io.connect("http://localhost:3002/", {
 
 const server_room = "log"
 
+const fs = require('fs');
+
+const writeFile = (content) => {
+    fs.writeFile('./log.txt', content + '\n', { flag: 'a+' }, err => {
+        if (err) {
+          console.error(err);
+        }
+      });
+} 
 
 socket1.on('connect', function () {
-    console.log(`connected to server-${1}`);
 
+    writeFile(`connected to server-${1}`)
+    
     socket1.emit("join_room", server_room)
 
     socket1.on('log_request', data => {
         const time = new Date().toString()
-        console.log(`Server-${1}: [time: ${time}, data: ${data}]`)
+        writeFile(`Server-${1}: [time: ${time}, data: ${data}]`)
     });
 });
 
 socket2.on('connect', function () {
-    console.log(`connected to server-${2}`);
+    writeFile(`connected to server-${2}`);
 
     socket2.emit("join_room", server_room)
 
     socket2.on('log_request', data => {
         const time = new Date().toString()
-        console.log(`Server-${2}: [time: ${time}, data: ${data}]`)
+        writeFile(`Server-${2}: [time: ${time}, data: ${data}]`)
     });
 });
 
 
 socket1.on("disconnect", () => {
-    console.log(`Server-${1} Disconnected`, socket1.id);
+    writeFile(`Server-${1} Disconnected`, socket1.id);
 });
 
 socket2.on("disconnect", () => {
-    console.log(`Server-${2} Disconnected`, socket2.id);
+    writeFile(`Server-${2} Disconnected`, socket2.id);
 });
