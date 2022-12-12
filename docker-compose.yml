@@ -24,7 +24,7 @@ services:
       - "2999:2999"
   
   client:
-    build: ../kr-client
+    build: ../client
     container_name: client
     ports:
       - "3000:3000"

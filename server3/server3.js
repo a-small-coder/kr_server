@@ -3,10 +3,10 @@
 // const net = require('net');
 
 const io = require('socket.io-client');
-const socket1 = io.connect("http://localhost:3001/", {
+const socket1 = io.connect("http://85.193.88.165:3001/", {
     reconnection: true
 });
-const socket2 = io.connect("http://localhost:3002/", {
+const socket2 = io.connect("http://85.193.88.165:3002/", {
     reconnection: true
 });
 
