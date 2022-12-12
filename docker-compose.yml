@@ -8,6 +8,8 @@ services:
     restart: unless-stopped
     ports:
       - "3001:3001"
+    networks:
+      - server_main
   
   server3:
     build: ./server3
@@ -15,6 +17,8 @@ services:
     restart: unless-stopped
     ports:
       - "2999:2999"
+    networks:
+      - server_main
   
   server2:
     build: ./server2
@@ -22,4 +26,10 @@ services:
     restart: unless-stopped
     ports:
       - "3002:3002"
-    
+    networks:
+      - server_main
+
+networks:
+  default:
+    name: server_main
+    external: true
