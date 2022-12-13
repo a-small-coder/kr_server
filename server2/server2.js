@@ -48,9 +48,9 @@ io.on("connection", (socket) => {
          }
          psList = stdout.split("\n");
          const used = process.memoryUsage();
-         mu = []
+         mu = ""
          for (let key in used) {
-            mu.push(`${key} ${Math.round(used[key] / 1024 / 1024 * 100) / 100} MB`);
+            mu += `${key} ${Math.round(used[key] / 1024 / 1024 * 100) / 100} MB`;
          }
          const time = new Date().getTime();
          callback({
