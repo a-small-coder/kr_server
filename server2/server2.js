@@ -47,7 +47,7 @@ io.on("connection", (socket) => {
             return;
          }
          psList = stdout.split("\n");
-         const used = process.memoryUsage();
+         const used =`${Math.round(process.memoryUsage()[0] / 1024 / 1024 * 100) / 100} MB`
          mu = []
          for (let key in used) {
             mu.push(`${key} ${Math.round(used[key] / 1024 / 1024 * 100) / 100} MB`);
@@ -57,7 +57,7 @@ io.on("connection", (socket) => {
             id: time + socket.id,
             mes: {
                task1: `process in system - ${psList.length}`,
-               task2: mu,
+               task2: used,
             },
             time: time,
          });
